@@ -6,13 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-import javax.sql.DataSource;
-
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class TaskFirstSpringBootApplication implements CommandLineRunner {
 
 
@@ -23,26 +19,15 @@ public class TaskFirstSpringBootApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(TaskFirstSpringBootApplication.class, args);
-    }
 
+    }
     @Override
     public void run(String... args) throws Exception {
         logger.info("paradit.extsys-db-point: {}", config.getPoint());
-        logger.info("paradit.extsys-db-schema: {}", config.getSchema());
         logger.info("paradit.extsys-db-login: {}", config.getLogin());
         logger.info("paradit.extsys-db-password: {}", config.getPassword());
         logger.info("paradit.extsys-db-data-source-class-name: {}", config.getDataSourceClassName());
         logger.info("Hello World");
-    }
-
-    @Configuration
-    static class SpringJdbcConfig {
-        @Bean
-        public DataSource mysqlDataSource() {
-            DriverManagerDataSource dataSource = new DriverManagerDataSource();
-            dataSource.setUrl("jdbc:postgresql://127.0.0.1:5432/pgdb?ApplicationName=Kaffka_DevConsumer");
-            return dataSource;
-        }
     }
 }
 

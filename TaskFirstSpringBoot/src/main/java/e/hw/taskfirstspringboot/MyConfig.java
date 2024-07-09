@@ -19,14 +19,6 @@ import org.springframework.context.annotation.Configuration;
         this.point = point;
     }
 
-    public String getSchema() {
-        return schema;
-    }
-
-    public void setSchema(String schema) {
-        this.schema = schema;
-    }
-
     public String getLogin() {
         return login;
     }
