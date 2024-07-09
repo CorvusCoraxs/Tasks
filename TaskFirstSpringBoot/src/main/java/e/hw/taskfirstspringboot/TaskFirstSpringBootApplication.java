@@ -32,7 +32,7 @@ public class TaskFirstSpringBootApplication implements CommandLineRunner {
         logger.info("paradit.extsys-db-login: {}", config.getLogin());
         logger.info("paradit.extsys-db-password: {}", config.getPassword());
         logger.info("paradit.extsys-db-data-source-class-name: {}", config.getDataSourceClassName());
-        System.out.println("HW");
+        logger.info("Hello World");
     }
 
     @Configuration
