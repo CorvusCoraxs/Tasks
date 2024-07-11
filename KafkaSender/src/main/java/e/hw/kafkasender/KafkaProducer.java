@@ -28,17 +28,17 @@ public class KafkaProducer {
 
     public void sendMessagesToKafka() {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder messageBuilder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
-                try {
-                    kafkaTemplate.send(topic, line);
-                    System.out.println("Sent message to Kafka: " + line);
-                } catch (Exception e) {
-                    logger.error("Error sending message to Kafka: {}", e.getMessage());
-                }
+                messageBuilder.append(line).append("\n");
             }
+            String message = messageBuilder.toString();
+            kafkaTemplate.send(topic, message);
+            System.out.println("Отправлено сообщение: " + message);
         } catch (IOException e) {
-            logger.error("Error reading file: {}", e.getMessage());
+            System.err.println("Ошибка при чтении файла: " + e.getMessage());
         }
     }
+
 }
