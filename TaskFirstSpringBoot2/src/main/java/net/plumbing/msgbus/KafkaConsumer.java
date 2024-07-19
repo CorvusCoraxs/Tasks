@@ -1,4 +1,4 @@
-package e.hw.taskfirstspringboot;
+package net.plumbing.msgbus;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
