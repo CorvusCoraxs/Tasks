@@ -2,19 +2,15 @@ package net.plumbing.msgbus.telegramm;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.ComponentScan;
-//import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import static  net.plumbing.msgbus.ServletApplication.propJDBC;
-import static  net.plumbing.msgbus.ServletApplication.ApplicationName;
-//@Configuration
-//@ComponentScan(basePackages = "ru.hermes.msgbus.*")
+import static  net.plumbing.msgbus.TaskFirstSpringBootApplication.propJDBC;
+import static  net.plumbing.msgbus.TaskFirstSpringBootApplication.ApplicationName;
+
 @Component
 
 public class ShutdownHook {

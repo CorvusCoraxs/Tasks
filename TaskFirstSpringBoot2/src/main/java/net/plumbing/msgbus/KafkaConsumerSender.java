@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 
 @Component
 public class KafkaConsumerSender {
+    /*
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -21,6 +22,8 @@ public class KafkaConsumerSender {
     public void sendMessageToDb(String topic, String message) {
         jdbcTemplate.update("INSERT INTO messages (topic, message) VALUES (?, ?)", topic, message);
     }
+
+     */
 }
 
 

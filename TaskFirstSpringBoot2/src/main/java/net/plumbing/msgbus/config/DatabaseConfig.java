@@ -1,22 +1,22 @@
 package net.plumbing.msgbus.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
+//import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import javax.sql.DataSource;
+//import javax.sql.DataSource;
 
 @Configuration
 @ConfigurationProperties("paradit.extsys")
-class DatabaseConfig {
-    private String point;
+public  class DatabaseConfig {
+    private static String point;
     private String schema;
     private String login;
     private String password;
     private String dataSourceClassName;
 
-    @Bean
+/*
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(getDataSourceClassName());
@@ -25,9 +25,9 @@ class DatabaseConfig {
         dataSource.setPassword(getPassword());
         return dataSource;
     }
-
-    public String getPoint() {
-        return point;
+*/
+    public  String getPoint() {
+        return this.point;
     }
 
     public void setPoint(String point) {
