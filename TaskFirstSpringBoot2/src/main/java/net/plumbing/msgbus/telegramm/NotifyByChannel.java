@@ -45,10 +45,12 @@ public class NotifyByChannel {
     public static void Telegram_sendMessage( String message4telegramm, Logger sendMessage_log) {
         if ( ChatBotUrl == null) {
             sendMessage_log.warn( "Telegram_SendMessage ChatBotUrl => NULL !" );
+            sendMessage_log.info(message4telegramm);
             return ;
         }
         if ( ! ChatBotUrl.startsWith("http") ) {
             sendMessage_log.warn( "Telegram_SendMessage ChatBotUrl != http !" );
+            sendMessage_log.info(message4telegramm);
             return ;
         }
 
