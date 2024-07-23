@@ -65,4 +65,25 @@ public  class DatabaseConfig {
     public void setDataSourceClassName(String dataSourceClassName) {
         this.dataSourceClassName = dataSourceClassName;
     }
+    private String waitTimeScan;
+    public String getwaitTimeScan() {
+        return this.waitTimeScan;
+    }
+    public void setwaitTimeScan(String waitTimeScan) {
+        this.waitTimeScan = waitTimeScan;
+    }
+
+    private String bootstrapServers;
+    public String getbootstrapServers() { return this.bootstrapServers; }
+    public void setbootstrapServers(String bootstrapServers) {
+        this.bootstrapServers = bootstrapServers;
+    }
+
+    private String totalNumTasks;
+    public String gettotalNumTasks() {
+        return totalNumTasks;
+    }
+    public void settotalNumTasks(String totalNumTasks) {
+        this.totalNumTasks = totalNumTasks;
+    }
 }

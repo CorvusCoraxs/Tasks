@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
-@Component
+//@Component
 public class KafkaConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
-
+ //   private static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
+/*
     @Value("${kafka.topic}")
     private String topic;
     @Value("${spring.kafka.consumer.group-id}")
@@ -36,6 +36,7 @@ public class KafkaConsumer {
 
         // Коммитим офсет
         consumer.commitSync(offsets);
-        */
+
     }
+    */
 }

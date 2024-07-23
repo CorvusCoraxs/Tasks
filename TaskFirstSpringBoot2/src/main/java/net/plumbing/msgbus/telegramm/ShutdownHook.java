@@ -8,8 +8,8 @@ import javax.annotation.PreDestroy;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-import static  net.plumbing.msgbus.TaskFirstSpringBootApplication.propJDBC;
-import static  net.plumbing.msgbus.TaskFirstSpringBootApplication.ApplicationName;
+import static  net.plumbing.msgbus.KafkaConsumerApplication.propJDBC;
+import static  net.plumbing.msgbus.KafkaConsumerApplication.ApplicationName;
 
 @Component
 
